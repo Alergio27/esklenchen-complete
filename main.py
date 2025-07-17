@@ -33,7 +33,7 @@ except ImportError as e:
 def create_app():
     """Factory para crear la aplicación Flask completa."""
     
-    app = Flask(__name__, static_folder='dist')
+    app = Flask(__name__, static_folder='dist', static_url_path='')
     
     # Configuración
     app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'esklenchen-complete-secret-2025')
